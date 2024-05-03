@@ -34,7 +34,7 @@ services:
       - "{{ letsencrypt_path }}/live/{{ secrets.server_name }}/privkey.pem:/pg-certs/server.key"
     environment:
       TZ: "Europe/Moscow"
-      START_SERVICES: "true"
+      START_SERVICES: "false"
 
       MINIO_CERTDIR: "/minio-certs"
       MINIO_HOST:    "{{ secrets.server_name }}:{{ secrets.minio.port_api }}"
